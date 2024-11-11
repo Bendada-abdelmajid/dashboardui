@@ -75,7 +75,7 @@ function Balance() {
 
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, {
-        damping: 60,
+        damping: 50,
         stiffness: 100,
     });
     useEffect(() => {

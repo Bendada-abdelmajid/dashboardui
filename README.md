@@ -18,17 +18,16 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Bendada-abdelmajid/dashboardui.git
 
 
 ```bash
+#1
+cd dashboardui
+#2
+npm install
+#3
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
