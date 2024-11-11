@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react'
 import SliderIcon from './ui/slider-icon';
-import * as motion from 'framer-motion/client';
+
 import MobileMenu from './mobile-meu';
 import { fade, slideLeft, slideRight } from '@/lib/animation';
-import { HTMLMotionProps } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
 const links = [
 
@@ -50,8 +50,8 @@ const Header = () => {
 
     return (
         <>
-         <motion.header key="header" className='flex sticky top-0 z-10 bg-background py-5 items-center justify-between gap-3'>
-            <motion.div key="logo" {...slideLeft}>
+         <header  className='flex sticky top-0 z-10 bg-background py-5 items-center justify-between gap-3'>
+            <motion.div {...slideLeft}>
                 <Link href="/" className='flex items-center gap-2'>
                 <div className='size-9 bg-yellow text-background font-bold text-xl  rounded-lg flex items-center justify-center'>
                     <span className='block -mr-0.5'>F</span>
@@ -88,7 +88,7 @@ const Header = () => {
                 <span className='text-sm capitalize'>menu</span>
 
             </motion.button>
-        </motion.header>
+        </header>
         <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
         </>
        
