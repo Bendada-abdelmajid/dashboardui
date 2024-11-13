@@ -12,7 +12,7 @@ type Props = {
 
 function Card({children, className}: Props) {
   return (
-    <motion.div className={cn("flex flex-col rounded-3xl bg-secondary p-5", className)} variants={item}>{children}</motion.div>
+    <motion.div  className={cn("flex flex-col rounded-3xl bg-secondary p-5", className)} variants={item}>{children}</motion.div>
   )
 }
 

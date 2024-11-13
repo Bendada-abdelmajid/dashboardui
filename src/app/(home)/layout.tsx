@@ -1,4 +1,5 @@
 import Header from '@/components/header'
+
 import React from 'react'
 
 
@@ -8,9 +9,13 @@ const layout = ({
     children: React.ReactNode;
   }>)  => {
   return (
-    <main className='px-5 lg:px-10 pb-5'>
+    <main className='px-5 lg:px-10 pb-5 '>
+   
          <Header />
          {children}
+         
+      
+        
     </main>
   )
 }

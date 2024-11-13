@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import SliderIcon from './ui/slider-icon';
 
 import MobileMenu from './mobile-meu';
-import { fade, slideLeft, slideRight } from '@/lib/animation';
+import { fade, slideLeft, slideRight, slideUp } from '@/lib/animation';
 import { HTMLMotionProps, motion } from 'framer-motion';
 
 const links = [
@@ -60,8 +60,7 @@ const Header = () => {
                 <h4 className='text-lg'>Fine Flex</h4>
             </Link>
             </motion.div>
-            <motion.nav key={"nav"} initial={{ clipPath: "inset(0px 50% 0px 50%)" }} transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
-                animate={{ clipPath: "inset(0px 0% 0px 0%)" }} className='hidden overflow-hidden 2lg:flex items-center bg-secondary text-secondary-foreground rounded-3xl  gap-3'>
+            <motion.nav {...slideUp} className='hidden overflow-hidden 2lg:flex items-center bg-secondary text-secondary-foreground rounded-3xl  gap-3'>
 
                 {links.map(({ Icon, label, url, id }) => (
                     <Link href={url} key={id} className={`flex py-3 rounded-3xl  px-5 items-center gap-2 text-sm ${pathname == url ? "bg-yellow text-black" : ""} `}>
@@ -83,7 +82,7 @@ const Header = () => {
 
                 </button>
             </motion.div>
-            <motion.button key="button" {...fade as HTMLMotionProps<"button">} onClick={() => setOpenMenu(true)} className='flex 2lg:hidden items-center gap-2 '>
+            <motion.button {...fade as HTMLMotionProps<"button">} onClick={() => setOpenMenu(true)} className='flex 2lg:hidden items-center gap-2 '>
 
                 <span className='text-sm capitalize'>menu</span>
 

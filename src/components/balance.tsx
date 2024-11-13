@@ -59,19 +59,17 @@ const chartData = [
 
 
 const chartConfig = {
-    views: {
-        label: "Page Views",
-    },
     value: {
-        label: "value",
+        label: "Total",
         color: "hsl(var(--blue))",
     },
+
 } satisfies ChartConfig
 
 function Balance() {
-    const [balance, setBalance]=useState(["0","00"])
+    const [balance, setBalance] = useState(["0", "00"])
 
-   
+
 
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, {
@@ -86,15 +84,15 @@ function Balance() {
     }, [motionValue]);
     useEffect(
         () =>
-          springValue.on("change", (latest) => {
-            setBalance(formatAsCurrency(latest).split("."));
-          }),
+            springValue.on("change", (latest) => {
+                setBalance(formatAsCurrency(latest).split("."));
+            }),
         [springValue],
-      );
+    );
     return (
 
         <motion.div key={"Balance"} variants={item} className="md:col-span-4 xl:col-span-5 flex gap-7 flex-col gradient text-black p-7 rounded-3xl relative">
-           <ArrowBtn className="absolute top-5 right-5 bg-black"/>
+            <ArrowBtn className="absolute top-5 right-5 bg-black" />
             <span className="text-lg font-light">Totale Balance</span>
             <h4 className="my-auto">
                 <span className="text-7xl font-light inline-block">{balance[0]}.</span>
@@ -131,13 +129,10 @@ function Balance() {
                         content={
                             <ChartTooltipContent
                                 className="w-[150px]"
-                                nameKey="views"
+                                nameKey="value"
+                                color="hsl(var(--yellow))"
                                 labelFormatter={(value) => {
-                                    return new Date(value).toLocaleDateString("en-US", {
-                                        month: "short",
-                                        day: "numeric",
-                                        year: "numeric",
-                                    })
+                                    return formatAsCurrency(value)
                                 }}
                             />
                         }

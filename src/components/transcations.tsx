@@ -34,7 +34,7 @@ const Transcations = () => {
 
 
   return (
-    <Card key="Transcations" className="md:col-span-4 row-span-2 text-secondary-foreground">
+    <Card  className="md:col-span-4 row-span-2 text-secondary-foreground">
       <div className="flex items-center justify-between mb-6">
         <h4 className="text-xl font-light ">Transcations</h4>
         <ArrowBtn />
@@ -48,7 +48,7 @@ const Transcations = () => {
 
 
       <ul className='grid gap-3 ' >
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode='wait' initial={false}>
           {data.map(el => (
       
             <motion.li   {...fade as HTMLMotionProps<"li">}

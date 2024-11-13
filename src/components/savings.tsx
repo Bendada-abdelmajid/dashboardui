@@ -8,7 +8,7 @@ import Card from './ui/card'
 
 const Savings = () => {
     return (
-        <Card key={"Savings"}>
+        <Card >
             <div className="flex items-start justify-between mb-2">
                
                     <h4 className="text-2xl  font-light text-secondary-foreground">Savings</h4>

@@ -56,7 +56,7 @@ const Transfer = () => {
 
             <motion.div
                 onMouseMove={(e: React.MouseEvent<HTMLElement>) => {
-                    e.preventDefault()
+                    
                     const { left, right } = e.currentTarget.getBoundingClientRect();
                     const offsetLeft = e.clientX - left;
                     const offsetRight = right - e.clientX;
@@ -67,7 +67,7 @@ const Transfer = () => {
                     mouseLeft.set(-Infinity);
                     mouseRight.set(-Infinity);
                 }}
-                className="mx-auto  my-auto hidden h-16 items-end gap-3 sm:flex relative"
+                className="mx-auto  my-auto  h-16 items-end gap-3 flex relative"
             >
 
 

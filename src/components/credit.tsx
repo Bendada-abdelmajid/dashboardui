@@ -10,7 +10,7 @@ import Card from './ui/card';
 const Credit = () => { 
      const credit = formatAsCurrency(4568).split(".");
     return (
-        <Card key="credit" className="md:col-span-3 xl:col-span-4 rounded-3xl  flex  flex-col-reverse xl:flex-row items-center p-0 bg-transparent  overflow-hidden relative">
+        <Card className="md:col-span-3 xl:col-span-4 rounded-3xl  flex  flex-col-reverse xl:flex-row items-center p-0 bg-transparent  overflow-hidden relative">
             <span className="absolute bottom-0 left-0 -translate-x-1/3 translate-y-2/3 blur-[60px] block size-[300px] rounded-full gradient-2 " />
             <div className="p-7 w-full rounded-3xl relative border border-[#4c4c4c] h-full gap-6 flex flex-col justify-between ">
                 <button className="absolute top-7 right-7 text-background grid place-content-center size-16 rounded-full bg-yellow">

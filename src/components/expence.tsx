@@ -23,7 +23,7 @@ const Expence = () => {
         </span>
       </div>
     </Card>
-    <Card className="text-secondary-foreground relative">
+    <Card  className="text-secondary-foreground relative">
      
     <ArrowBtn className='absolute top-5 right-5'/>
       <span className="text-lg font-extralight">Expence</span>

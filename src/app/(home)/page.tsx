@@ -15,9 +15,10 @@ const container = {
   visible: {
 
     transition: {
-      ease: [0.04, 0.62, 0.23, 0.98],
-      delayChildren: 0.1,
-      staggerChildren: 0.2,
+      ease: [0, 0.71, 0.2, 1.01],
+      
+      delayChildren: 0.5,
+      staggerChildren: 0.15,
     },
   },
 };

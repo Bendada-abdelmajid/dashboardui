@@ -47,7 +47,7 @@ export function Spending() {
     const [active, setActive] = useState(1)
 
     return (
-        <Card key="Spending" className="md:col-span-3">
+        <Card className="md:col-span-3">
             <div className="flex items-center justify-between mb-5">
                 <h4 className="text-xl font-light text-secondary-foreground">Top Spending</h4>
               <ArrowBtn/>

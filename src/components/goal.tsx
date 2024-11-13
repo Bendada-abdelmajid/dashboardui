@@ -15,7 +15,7 @@ function Goal() {
     const [budget, setBudget] = useState(1500)
     const percentage = ( budget* 100) /myGole
     return (
-        <Card key={"Goal"} className='relative overflow-hidden '>
+        <Card  className='relative overflow-hidden '>
             <span style={{width:`${percentage}%`}} className='block absolute top-0 left-0 h-full bg-yellow/10'/>
         <div className="flex flex-col h-full">
             <div className="flex items-start justify-between mb-4">
